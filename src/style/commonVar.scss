@@ -1,0 +1,63 @@
+/* var */
+$minWidth:1260px;
+$line : rgb(234, 231, 231);
+$underline:1px solid $line;
+
+/* mixin */
+@mixin hideTxt{
+  display: block;
+  overflow: hidden;
+  width: 1px;
+  height: 1px;
+  font-size: 1px;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+@mixin wrapBox{
+  width: 100%;
+  > div {
+    max-width: $minWidth;
+    min-width: $minWidth;
+    margin: auto;
+  }
+}
+@mixin wid1050 {
+  max-width: $minWidth;
+  min-width: $minWidth;
+  padding: 0 20px;
+  margin: auto;
+}
+
+
+@mixin inputStyle($inputWidth){
+  border: 1px solid rgb(219, 216, 216);
+  width: $inputWidth;
+  display: block;
+  height: 40px;
+  padding: 0 10px;
+  margin: 10px 0;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+}
+
+@mixin buttonSet($width){
+  width: $width;
+  background: #000;
+  color: #fff;
+  height: 50px;
+  margin: 15px 0;
+  font-size: 0.8rem;
+  border-radius: 3px;
+}
+
+@mixin whiteBtn($width){
+  width: $width;
+  height: 40px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  padding-left: 20px;
+  background: #fff;
+  color: #000;
+  border: 1px solid rgb(222, 220, 220);
+}

@@ -1,0 +1,123 @@
+/* var */
+/* mixin */
+.login {
+  width: 400px;
+  margin: auto;
+  margin-top: 40px;
+}
+
+.buttonSet1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.buttonSet1 button {
+  width: 50%;
+  height: 40px;
+  font-size: 0.8rem;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: #eee;
+  color: rgb(140, 140, 140);
+}
+.buttonSet1 button.current {
+  background: #000;
+  color: #fff;
+}
+
+.loginForm input {
+  border: 1px solid rgb(219, 216, 216);
+  width: 100%;
+  display: block;
+  height: 40px;
+  padding: 0 10px;
+  margin: 10px 0;
+  font-size: 0.8rem;
+  box-sizing: border-box;
+}
+.loginForm .join span {
+  font-size: 0.75rem;
+  display: block;
+  text-align: right;
+}
+.loginForm .join .btnLogin {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 50px;
+  margin: 15px 0;
+  font-size: 0.8rem;
+}
+.loginForm .join .buttonSet2 {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 0.8rem;
+  letter-spacing: -1px;
+  gap: 15px;
+}
+.loginForm .join .buttonSet2 span {
+  color: rgb(213, 211, 211);
+}
+.loginForm .join .snsLogin {
+  display: flex;
+  margin-top: 35px;
+  justify-content: space-between;
+}
+.loginForm .join .snsLogin button {
+  width: 49%;
+  height: 40px;
+  font-size: 0.8rem;
+  border-radius: 3px;
+  padding-left: 20px;
+  position: relative;
+}
+.loginForm .join .snsLogin button img {
+  position: absolute;
+  width: 17px;
+  vertical-align: middle;
+  left: 20px;
+}
+.loginForm .no_join {
+  font-size: 0.8rem;
+  padding-top: 25px;
+  position: relative;
+}
+.loginForm .no_join .alertTxt {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  background: rgb(246, 244, 244);
+  padding: 20px 20px;
+  opacity: 0.8;
+  text-align: center;
+  line-height: 16px;
+  border-radius: 10px;
+}
+.loginForm .no_join .inputSet {
+  opacity: 0.5;
+}
+.loginForm .no_join .btn {
+  width: 100%;
+  background: #000;
+  color: #fff;
+  height: 50px;
+  margin: 15px 0;
+  font-size: 0.8rem;
+}
+.loginForm .no_join .joinTxt {
+  margin-top: 10px;
+}
+.loginForm .no_join .joinTxt .btnJoin {
+  background: #fff;
+  color: #000;
+  border: 1px solid rgb(222, 220, 220);
+}
+
+.show {
+  display: block !important;
+}
+
+.hide {
+  display: none !important;
+}/*# sourceMappingURL=login.css.map */

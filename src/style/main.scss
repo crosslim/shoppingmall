@@ -1,0 +1,50 @@
+h3{
+  display: none;
+}
+
+.imageSlideWrap{
+    height: 750px; //750
+    width: 100%;
+    overflow: hidden;
+    margin-bottom: 40px;
+  .imageSlide{
+    width: 300vw;
+    transition: 0.5s;
+    .slideItem{
+      display: inline-block;
+    }
+  }
+}
+
+.imageSlide{
+  position: relative;
+  > button {
+    position: absolute;
+    top: 20%;
+    z-index: 1;
+    border: none;
+    cursor: pointer;
+  }
+  .btnLeft{
+    left: 0;
+  }
+  .btnRight{
+    right: 0;
+  }
+  .indicator{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 8px;
+    bottom: 0;
+    z-index: 2;
+    span{
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      border-radius: 50px;
+      background: #aaa;
+    }
+  }
+}

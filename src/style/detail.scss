@@ -1,0 +1,186 @@
+.categoryTxt{
+  font-size: 0.85rem;
+  margin: 20px 0 30px 0;
+  text-align: right;
+  color: rgb(146, 145, 145);
+}
+
+.detailTop{
+  display: flex;
+  justify-content: space-between;
+  > div {
+      display: inline-block;
+      width: 47%;
+      vertical-align: top;
+      margin-top: 20px;
+      font-size: 0.9rem;
+      line-height: 20px;
+      img{
+          width: 100%;
+      }
+  }
+}
+
+
+
+// 상품정보
+.productInfo{
+  ul{
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+      li{
+          margin-bottom: 20px;
+          padding: 0 0 20px 20px;
+          border-bottom: 1px solid #eee;
+          .subtitle{
+              width: 100px;
+          }
+          b.importantText{
+              display: block;
+              font-size: 0.8rem;
+              margin-top: 5px;
+              color: rgb(196, 100, 100);
+          }
+      }
+      li.pdName {
+          color: rgb(124, 123, 123);
+          .title{
+              color: #000;
+              display: block;
+              font-size: 1.2rem;
+              font-weight: 600;
+              margin-bottom: 10px;
+          }
+      }
+      li.price{
+          font-size: 1.0rem;
+          .title{
+              font-size: 1.3rem;
+              margin-right: 5px;
+          }
+      }
+      li.color{
+          > span{
+              display: inline-block;
+              vertical-align: middle;
+          }
+          button.colorBar{
+              display: inline-block;
+              width: 50px;
+              height: 20px;
+              margin: 0 5px 0 0;
+              border-radius: 4px;
+              position: relative;
+          }
+          span.selected{
+              position: absolute;
+              z-index: 1;
+              background: red;
+              color: #fff;
+              padding: 0 7px;
+              margin: -8px 0 0 -20px;
+              border-radius: 50px;
+              font-size: 0.6rem;
+              display: none;
+          }
+          span.selectedShow{
+              display: block;
+          }
+      }
+      li.packaging{
+          border-bottom: none;
+          padding-bottom: 10px;
+          span{
+              display: inline-block;
+              vertical-align: middle;
+          }
+          label{
+              margin: 0 10px 0 0;
+              input[type='radio']{
+                  margin-right: 8px;
+                  vertical-align: middle;
+              }
+          }
+      }
+      
+      table{
+          width: 100%;
+          border-top: 1px solid #aaa;
+          border-bottom: 1px solid #aaa;
+          text-align: center;
+          tr td{
+              width: 30%;
+              padding: 10px 0;
+          }
+          tr:first-child td{
+              padding: 5px 0;
+              border-bottom: 1px solid #eee;
+          }
+      }
+      .totalprice{
+          text-align: right;
+          display: block;
+          margin: 20px 0;
+          b{
+              font-size: 1.2rem;
+              margin-bottom: -10px;
+              display: block;
+          }
+      }
+      li.buttonSet{
+          border-bottom: 0;
+          margin-bottom: 0;
+          padding: 0;
+          display: flex;
+          justify-content: space-between;
+          button{
+              width: 32%;
+              font-weight: 600;
+              font-size: 1.1rem;
+              padding: 16px 0;
+          }
+          button.buy{
+              background: #000;
+              color: #fff;
+          }
+      }
+  }
+}
+
+
+
+
+
+.information{
+  font-size: 0.9rem;
+  line-height: 28px;
+  margin-top: 200px;
+  letter-spacing: -0.5px;
+  > ul {
+    padding: 0;
+    margin-bottom: 60px;
+
+      li.title{
+          font-weight: 600;
+          font-size: 0.95rem;
+          padding-bottom: 20px;
+          margin-bottom: 20px;
+          border-bottom: 1px solid rgb(231, 230, 230);
+      }
+  }
+  ul.delivery_info{
+      span{
+          display: block;
+      }
+  }
+  ul.return_info{
+      li.info{
+          margin-top: 20px;
+          span.subtitle{
+              display: block;
+              font-weight: 600;
+              margin-bottom: 10px;
+          }
+      }
+  }
+}
