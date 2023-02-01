@@ -25,7 +25,8 @@ function ListForm(props) {
                 <span className='subTxt'>{currentArray[num].subTitle}</span>
                 <span className='price'>
                   {
-                    currentArray[num].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                    // currentArray[num].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                    currentArray[num].price
                   }&nbsp;Won
                 </span>
                 <span className='review'>reviews <span>{currentArray[num].review.length}</span></span>
@@ -61,7 +62,7 @@ function SaleList(props){
                 <span className='subTxt'>{currentArray[num].subTitle}</span>
                 <span className='price'>
                   {
-                    currentArray[num].price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                    currentArray[num].price
                   }&nbsp;Won
                 </span>
                 <span className='review'>reviews <span>{currentArray[num].review.length}</span></span>

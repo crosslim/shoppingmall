@@ -50,7 +50,7 @@ function Contents(){
               <li className='price'>
                 <span className="title">
                   {
-                    currentProduct?.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                    currentProduct?.price
                   }
                 </span>
                 won
@@ -93,7 +93,8 @@ function Contents(){
                     <td></td>
                     <td>
                       {
-                        currentProduct?.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                        // currentProduct?.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
+                        currentProduct.price
                       }
                     </td>
                   </tr>
