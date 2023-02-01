@@ -1,6 +1,6 @@
 .join {
-  font-size: 0.8rem;
-  padding: 0 20px;
+  font-size: 0.9rem;
+  padding: 0 0px;
   margin-top: 20px;
 }
 .join table {
@@ -14,7 +14,7 @@
   padding: 10px 10px;
 }
 .join table tr td input {
-  height: 30px;
+  height: 40px;
   padding: 0 10px;
   font-size: 0.8rem;
   margin-right: 10px;
@@ -40,13 +40,14 @@
   margin: 50px 0 100px 0;
 }
 .terms > span {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   display: block;
   margin-bottom: 20px;
 }
 .terms ul {
   padding: 0;
+  background: #f8f8f8;
 }
 .terms ul li {
   border: 1px solid #eee;
@@ -67,12 +68,16 @@
   margin: 15px 0;
   width: 100%;
   height: 200px;
-  font-size: 0.8rem;
+  font-size: 0.9rem;
   padding: 20px;
   line-height: 24px;
   box-sizing: border-box;
   border: 1px solid rgb(219, 218, 218);
   border-radius: 4px;
+  resize: none;
+}
+.terms ul li:last-child textarea {
+  height: 120px;
 }
 .terms ul li input[type=checkBox] {
   margin: 0 7px 0 14px;

@@ -1,0 +1,45 @@
+@import 'commonVar.scss';
+
+.categoryPageTop{
+  @include wid1050;
+  margin-top: 10px;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  padding-bottom: 6px;
+  .pagePath{
+    font-size: 0.85rem;
+    text-align: right;
+  }
+  .pageName{
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin: 30px 0;
+  }
+  .pageDetail{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.8rem;
+    color: rgb(124, 124, 124);
+    .detail1{
+      span{
+        font-weight: 700;
+        color: #000;
+      }
+    }
+    .detail2{
+      span::after{
+        content: '|';
+        width: 10px;
+        height: 50%;
+        color: rgb(224, 219, 219);
+        margin: 0 14px;
+        vertical-align: top;
+      }
+      span:last-child::after{
+        content: none;
+      }
+    }
+  }
+}

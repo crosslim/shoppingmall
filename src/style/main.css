@@ -1,3 +1,5 @@
+/* var */
+/* mixin */
 h3 {
   display: none;
 }
@@ -5,15 +7,53 @@ h3 {
 .imageSlideWrap {
   height: 750px;
   width: 100%;
-  overflow: hidden;
   margin-bottom: 40px;
+  position: relative;
 }
 .imageSlideWrap .imageSlide {
-  width: 300vw;
+  width: 200vw;
   transition: 0.5s;
+  padding: 0;
+  overflow: hidden;
+  height: 750px;
+  white-space: nowrap;
+  transition: transform 1s;
 }
 .imageSlideWrap .imageSlide .slideItem {
   display: inline-block;
+  width: 213vh;
+  text-align: center;
+  position: relative;
+}
+.imageSlideWrap .slide_preBtn, .imageSlideWrap .slide_nextBtn {
+  position: absolute;
+  top: 50%;
+  border: 0;
+  cursor: pointer;
+}
+.imageSlideWrap .slide_preBtn {
+  left: 200px;
+}
+.imageSlideWrap .slide_nextBtn {
+  right: 200px;
+}
+.imageSlideWrap .slideDot {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  display: flex;
+  gap: 10px;
+}
+.imageSlideWrap .slideDot button {
+  display: inline-block;
+  width: 10px;
+  height: 12px;
+  background: #aaa;
+  border-radius: 10px;
+  border: none;
+}
+.imageSlideWrap .slideDot .currentDot {
+  background-color: #111;
 }
 
 .imageSlide {
@@ -47,4 +87,163 @@ h3 {
   height: 12px;
   border-radius: 50px;
   background: #aaa;
+}
+
+.saleBanner .wid1050 {
+  max-width: 1260px;
+  min-width: 1260px;
+  padding: 0 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+}
+.saleBanner .wid1050 img {
+  width: 30%;
+}
+
+.choiceItem {
+  text-align: center;
+  padding-top: 70px;
+  width: 100%;
+}
+.choiceItem p {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+.choiceItem p b {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #000;
+}
+.choiceItem .btnSet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  gap: 10px;
+}
+.choiceItem .btnSet button {
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 15px 30px;
+  background: #fff;
+}
+.choiceItem .btnSet button:last-child {
+  background: #000;
+  color: #fff;
+}
+
+.banner1 {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+  background: rgb(239, 231, 231);
+}
+
+.banner2 {
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+  background: rgb(237, 236, 236);
+}
+
+.bestItem .title, .newItem .title, .mdpickItem .title, .bestReview .title {
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+  line-height: 22px;
+  margin: 40px 0;
+}
+.bestItem .title b, .newItem .title b, .mdpickItem .title b, .bestReview .title b {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  color: #000;
+  display: block;
+}
+
+.main_contents > section {
+  margin-bottom: 100px;
+}
+
+.reviews {
+  max-width: 1260px;
+  min-width: 1260px;
+  padding: 0 20px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+  cursor: default;
+}
+.reviews .icon {
+  position: absolute;
+  width: 25px !important;
+  height: 25px !important;
+  margin: 5px 0 0 5px;
+  opacity: 0.8;
+}
+.reviews .reviewBox {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  width: 19%;
+  overflow: hidden;
+}
+.reviews .reviewBox img {
+  width: 100%;
+  height: 100%;
+}
+.reviews .reviewBox .reviewImg {
+  height: 240px;
+  overflow: hidden;
+}
+.reviews .reviewBox .reviewTxt {
+  font-size: 0.8rem;
+  line-height: 18px;
+  padding: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.reviews .reviewBox .reviewTxt .userId {
+  display: block;
+  text-align: right;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #eee;
+  border-bottom: 1px dotted #aaa;
+}
+.reviews .reviewBox .reviewDetail {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 0 12px 12px 12px;
+}
+.reviews .reviewBox .reviewDetail .userImg {
+  width: 34px;
+  height: 34px;
+  border-radius: 50px;
+  overflow: hidden;
+}
+.reviews .reviewBox .reviewDetail .userImg img {
+  width: 100%;
+}
+.reviews .reviewBox .reviewDetail .userImg + div {
+  width: 80%;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+.reviews .reviewBox .reviewDetail .userImg + div ul {
+  padding: 0;
+  margin: 0;
+}
+.reviews .reviewMore {
+  font-size: 0.8rem;
+  margin: auto;
+  padding: 15px 80px;
+  margin-top: 15px;
 }/*# sourceMappingURL=main.css.map */

@@ -1,3 +1,30 @@
+@import 'commonVar.scss';
+
+@mixin bannerSet($backColor){
+  width: 100%;
+  text-align: center;
+  margin: 50px 0;
+  background: $backColor;
+}
+
+//메인 리스트 타이틀 스타일
+@mixin titleSet{
+  font-size: 0.9rem;
+  color: #aaa;
+  text-align: center;
+  line-height: 22px;
+  margin: 40px 0;
+  b{
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 1.3rem;
+    color: #000;
+    display: block;
+  }
+}
+  
+
+
 h3{
   display: none;
 }
@@ -5,13 +32,53 @@ h3{
 .imageSlideWrap{
     height: 750px; //750
     width: 100%;
-    overflow: hidden;
     margin-bottom: 40px;
-  .imageSlide{
-    width: 300vw;
-    transition: 0.5s;
-    .slideItem{
+    position: relative;;
+
+    .imageSlide{
+      width: 200vw;
+      transition: 0.5s;
+      padding: 0;
+      overflow: hidden;
+      height: 750px;
+      white-space: nowrap;
+      transition: transform 1s;
+
+      .slideItem{
       display: inline-block;
+      width: 213vh;
+      text-align: center;
+      position: relative;
+    }
+  }
+  .slide_preBtn, .slide_nextBtn{
+    position: absolute;
+    top: 50%;
+    border: 0;
+    cursor: pointer;
+  }
+  .slide_preBtn{
+    left: 200px;
+  }
+  .slide_nextBtn{
+    right: 200px;
+  }
+  .slideDot{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    display: flex;
+    gap: 10px;
+    button{
+      display: inline-block;
+      width: 10px;
+      height: 12px;
+      background: #aaa;
+      border-radius: 10px;
+      border: none;
+    }
+    .currentDot{
+      background-color: #111;
     }
   }
 }
@@ -46,5 +113,148 @@ h3{
       border-radius: 50px;
       background: #aaa;
     }
+  }
+}
+
+.saleBanner{
+  .wid1050{
+    @include wid1050;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 80px;
+    img{
+      width: 30%;
+    }
+  }
+}
+
+.choiceItem{
+  text-align: center;
+  // background: #f1f0f0;
+  padding-top: 70px;
+  width: 100%;
+  p{
+    font-size: 0.9rem;
+    color: #aaa;
+    b{
+      font-weight: 700;
+      text-transform: uppercase;
+      font-size: 1.3rem;
+      color: #000;
+    }
+  }
+  .btnSet{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    gap: 10px;
+    button{
+      text-transform: uppercase;
+      font-size: 0.9rem;
+      padding: 15px 30px;
+      background: #fff;
+    }
+    button:last-child{
+      background: #000;
+      color: #fff;
+    }
+  }
+}
+
+
+.banner1{
+  @include bannerSet(rgb(239, 231, 231));
+}
+
+.banner2{
+  @include bannerSet(rgb(237, 236, 236));
+}
+
+.bestItem, .newItem, .mdpickItem, .bestReview{
+  .title{
+    @include titleSet;
+  }
+}
+.main_contents > section{
+  margin-bottom: 100px;
+}
+
+
+.reviews{
+  @include wid1050();
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  position: relative;
+  cursor: default;
+  .icon{
+    position: absolute;
+    width: 25px !important;
+    height: 25px !important;
+    margin: 5px 0 0 5px;
+    opacity: 0.8;
+    
+  }
+  .reviewBox{
+    border: 1px solid #eee;
+    border-radius: 4px;
+    width: 19%;
+    overflow: hidden;
+    img{
+      width: 100%;
+      height: 100%;
+    }
+    .reviewImg{
+      height: 240px;
+      overflow: hidden;
+    }
+    .reviewTxt{
+      font-size: 0.8rem;
+      line-height: 18px;
+      padding: 12px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      .userId{
+        display: block;
+        text-align: right;
+        padding-bottom: 10px;
+        border-bottom: 1px dotted #eee;
+        border-bottom: 1px dotted #aaa;
+      }
+    }
+    .reviewDetail{
+      display: flex;
+      justify-content: left;
+      align-items: center;
+      padding: 0 12px 12px 12px;
+      .userImg{
+        width: 34px;
+        height: 34px;
+        border-radius: 50px;
+        overflow: hidden;
+        img{
+          width: 100%;
+        }
+      }
+      .userImg + div{
+        width: 80%;
+        font-size: 0.8rem;
+        margin-left: 10px;
+        ul{
+          padding: 0;
+          margin: 0;
+        }
+      }
+    }
+  }
+  .reviewMore{
+    font-size: 0.8rem;
+    margin: auto;
+    padding: 15px 80px;
+    margin-top: 15px;
   }
 }

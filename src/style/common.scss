@@ -53,13 +53,132 @@ body{
   top: 0;
 }
 
+.topBanner{
+  width: 100%;
+  height: 55px;
+  background: rgb(179, 179, 180);
+  > div{
+    margin: auto;
+    width: $minWidth;
+    display: flex;
+    justify-content:left;
+    align-items: center;
+    text-align: right;
+    height: 100%;
+    vertical-align: middle;
+    background-image: url(../../public/images/shop/topBanner.jpg);
+    background-position: center center;
+  }
+  label{
+    font-size: 0.8rem;
+    color: #fff;
+    margin-right: 8px;
+    span{
+      display: inline-block;
+    }
+  }
+  input{
+    margin-right: 5px;
+  }
+  button{
+    width: 25px;
+    vertical-align: middle;
+    border: none;
+    filter: invert(1);
+    margin: -5px 0 0 0;
+    img{
+      width: 100%;
+    }
+  }
+}
+
+
+
+.topMain{
+  display: flex;
+  justify-content: space-between;
+  width: $minWidth;;
+  margin: auto;
+  align-items: center;
+  height: 166px;
+  
+  .thum{
+    position: relative;
+    height: 100%;
+    width: 210px;
+    img{
+      position: absolute;
+      top: 20px;
+    }
+  }
+  .search{
+    .searchBar{
+      background: #edebeb;
+      position: relative;
+      padding: 4px 20px;
+      border-radius: 30px;
+    }
+    input{
+      background: none;
+      border: none;
+      font-size: 0.8rem;
+    }
+    .searchBox{
+      width: 100%;
+      height: 30px;
+      margin-top: 10px;
+      overflow: hidden;
+      position: relative;
+      margin-left: 14px;
+      ul.searchList{
+        position: absolute;
+        padding: 0;
+        font-size: 0.8rem;
+        margin: 0px 0 0 0;
+        transition: 0.5s;
+        li{
+          margin-top: 4px;
+          line-height: 24px;
+          span{
+            font-weight: 600;
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+    ul.list{
+      li:first-child{
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+      position: absolute;
+      z-index: 1;
+      background: #fff;
+      padding: 10px 10px;
+      font-size: 0.8rem;
+      line-height: 22px;
+      border: 1px solid #eee;
+      margin-left: 10px;
+      width: 180px;
+      li span{
+          font-weight: 600;
+          margin-right: 4px;
+      }
+    }
+  }
+}
+
+
+header.header {
+  top: 0;
+  z-index: 1;
+}
+
 /*  header - 1.top menu  */
 .topMenu{
   border-bottom: $underline;
-  position: fixed;
-  top: 0;
   background: #fff;
-  z-index: 1;
+  opacity: 0.9;
   > div {
     font-size: 0.8rem;
     color: #706f6f;
@@ -136,16 +255,21 @@ body{
 
 .category{
   position: sticky;
+  z-index: 1;
+  background: #fff;
   top: 40px;
   display: flex;
   align-items: center;
   padding: 15px 0;
   border-bottom: $underline;
+  border-top: $underline;
   font-size: 0.95rem;
   font-weight: 700px;
+  opacity: 0.8;
   > div {
     min-width: $minWidth;
     max-width: $minWidth;
+    padding: 0 20px
   }
 }
 .category_list{
@@ -181,8 +305,8 @@ body{
   padding-bottom: 40px !important;
   ul{
     border-right: 1px solid $line;
-    line-height: 16px;
-    font-size: 0.7rem;
+    line-height: 20px;
+    font-size: 0.8rem;
     width: 32%;
     display: block;
     padding-right: 50px;
@@ -353,6 +477,8 @@ body{
     margin: 0 0 0 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    gap: 10px;
     button{
       border: none;
       text-align: center;
@@ -466,6 +592,15 @@ $widthSize : 250px;
     font-size: 0.8rem;
     line-height: 17px;
     margin-bottom: 25px;
+    .eventAlert{
+      background: rgb(242, 242, 242);
+      text-align: center;
+      font-size: 0.8rem;
+      padding: 10px 0;
+      border: 1px solid rgb(233, 229, 229);
+      border-radius: 3px;
+      color: rgb(140, 139, 139);
+    }
     span{
       display: block;
     }
@@ -525,6 +660,7 @@ $widthSize : 250px;
     font-weight: 600;
     text-transform: uppercase;
     margin-top: 30px;
+    font-size: 1.2rem;
   }
 }
 
@@ -539,3 +675,5 @@ $widthSize : 250px;
   @include wid1050();
   margin-bottom: 40px;
 }
+
+

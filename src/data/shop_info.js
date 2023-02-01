@@ -213,6 +213,12 @@ const terms = [
 
 const mainSlideImage = [
   'images/shop/main.jpg',
-  'images/shop/main2.jpg'
+  'images/shop/main2.jpg',
+  'images/shop/main.jpg',
+  'images/shop/main2.jpg',
 ];
-export { shopInfo, terms, mainSlideImage };
+
+const searchWord = [
+  '감성디자인','두번째 이야기','데일리 다이어리','위클리 스케줄러','베이직 노트',
+]
+export { shopInfo, terms, mainSlideImage, searchWord };

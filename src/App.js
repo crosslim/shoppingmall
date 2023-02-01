@@ -5,8 +5,7 @@ import Detail from './component/Detail'
 import Company from './component/Company'
 import Login from './component/Login'
 import Join from './component/Join'
-import Category from './component/Category'
-import { Interior, Digital } from './component/CategoryPage'
+import { Category, DesignStationery, Fashion, Beauty, Interior, Items, Digital, Sale} from './component/Category'
 
 // import {Interior} from './component/CategoryPage'
 import './style/common.css'
@@ -21,8 +20,13 @@ function App() {
         <Route path="/login" element={ <Login /> } />
         <Route path="/join" element={ <Join /> } />
         <Route path="/category" element={ <Category /> }>
+          <Route path="designStationery" element={ <DesignStationery /> } />
+          <Route path="fashion" element={ <Fashion /> } />
+          <Route path="beauty" element={ <Beauty /> } />
           <Route path="interior" element={ <Interior /> } />
+          <Route path="items" element={ <Items /> } />
           <Route path="digital" element={ <Digital /> } />
+          <Route path="sale" element={ <Sale /> } />
         </Route>
       </Routes>
     </div>
