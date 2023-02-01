@@ -9,6 +9,7 @@ import { Category, DesignStationery, Fashion, Beauty, Interior, Items, Digital, 
 
 // import {Interior} from './component/CategoryPage'
 import './style/common.css'
+import './style/mobile.css'
 
 function App() {
   return (

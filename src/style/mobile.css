@@ -1,0 +1,277 @@
+@media all and (max-width: 768px) {
+  body {
+    background: #eee;
+  }
+  .titleTab, .saleBanner .wid1050, .title, .category > div.category_list,
+  .main_contents .section, .choiceItem, .banner1 > img, .banner2 > img,
+  .footerinfo3, .reviews{
+    width: 100vw !important;
+  }
+  
+
+
+  /* header */
+  .topMain .thum, .topMain .search, .sidemenu{
+    display: none;
+  }
+  .topMain {
+    justify-content: center;
+    height: auto;
+    padding: 40px 0 30px;
+    max-width: 100vw;
+    min-width: 100vw;
+  }
+  .topMenu > div > div.menu-Left {
+    width: 100%;
+}
+.topBanner button {
+  margin: -5px 0 0 10px;
+}
+.topBanner > div label{
+  display: none;
+}
+.topBanner > div {
+  margin: auto;
+  width: 100vw;
+}
+  .topMenu > div{
+    text-align: center;
+    padding: 20px 0;
+    height: auto;
+    max-width: 100vw;
+    min-width: 100vw;
+  }
+  .center-Logo, .menu-right{
+    display: none;
+  }
+  .topMenu .menu-right{
+    text-align: left;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    position: relative;
+  }
+
+  /* slide */
+  .slideItem img{
+    width: 100%;
+  }
+  .imageSlideWrap .slide_preBtn {
+    left: 20px;
+  }
+    .imageSlideWrap .slide_nextBtn {
+      right: 20px;
+  }
+
+
+  /* header - category */
+  .category_list {
+    width: 100vw;
+    display: flex;
+    align-items: self-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    background: #eee;
+    gap: 1px;
+  }
+  .category{
+    padding: 0;
+  }
+  .category > div{
+    margin: 0;
+    padding: 0;
+  }
+  .category_list span{
+    font-size: 0.8rem;
+    padding: 15px  0;
+    text-align: center;
+    width: 19.8%;
+    background: #fff;
+  }
+
+
+  /* header - logo */
+  .logo{
+    text-align: center;
+  }
+  .logo img{
+    width: 80%;
+    margin: auto;
+  }
+
+  
+
+
+
+
+  /* main */
+  .choiceItem, .bestItem, .saleItem, .mdpickItem, .reviews, .pdList,
+  .categoryPageTop{
+    max-width: 100vw;
+    min-width: 100vw;
+    padding: 0 20px;
+    margin: auto;
+  }
+  .titleTab, .title, .itemBox, .saleItem, .mdpickItem, .reviews, .pdList
+  , .pageName{
+    width: 100% !important;
+  }
+  .main_contents > section {
+    margin-bottom: 40px;
+  }
+  .saleBanner .wid1050 {
+    max-width: 100vw;
+    min-width: 100vw;
+    padding: 0 20px;
+  }
+
+  .itemBox {
+      gap: 5px;
+      justify-content: space-between;
+      width: 100vw;
+  }
+  .itemBox .item {
+      flex-basis: 250px;
+      width: 150px;
+      font-size: 0.8rem;
+  }
+  .itemBox .item span.img img, .topMain {
+    width: 100%;
+}
+  
+/* main - review */
+.reviews{
+
+}
+.reviews .reviewMore {
+  font-size: 0.8rem;
+  margin: auto;
+  padding: 15px 80px;
+  margin-top: 15px;
+  display: block;
+}
+.reviews .reviewBox .reviewImg {
+  height: 140px;
+}
+.reviews .reviewBox {
+  width: 31.5%;
+}
+
+/* footer */
+.footer section > div {
+  max-width: 100vw;
+  min-width: 100vw;
+  padding: 0 20px;
+  margin: auto;
+  display: block;
+  width: 100%;
+}
+.footerinfo2, .shopInfo_txt, .shopInfo_txt + div{
+  text-align: center;
+}
+.shopInfo_txt{
+  margin-bottom: 30px;
+}
+.footerinfo1 ul{
+  width: 100%;
+  display: block;
+  margin: 0;
+  padding: 0 20px !important;
+  border: none;
+  margin-bottom: 50px;
+}
+.footerinfo1 ul:last-child{
+  margin-bottom: 0;
+}
+.myMenu button{
+  padding: 50px 0 40px;
+}
+.footerinfo1 ul li.title {
+  text-transform: uppercase;
+  font-size: 0.6rem;
+  font-weight: 600;
+  width: 100%;
+  border-bottom: 1px solid rgb(234, 231, 231);
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+}
+
+
+
+/* list */
+.categoryPageTop{
+  margin: 10px 0 20px 0;
+  border-bottom: 0;
+  width: 100vw;
+}  
+.categoryPageTop .pageName{
+    margin: 10px 0 30px;
+}
+.categoryPageTop .pageDetail{
+    margin: 10px 0 10px;
+}
+
+
+/* detail page */
+.detail_wrap, .company.con, .join.con{
+  width: 100vw;
+  max-width: 100vw;
+  min-width: 100vw;
+}
+.detailTop{
+  flex-direction: column;
+}
+.detailTop > div {
+  width: 100%;
+}
+.productInfo ul {
+  border-top: 1px solid #eee;
+  padding: 0;
+  padding-top: 20px;
+}
+
+/* login join */
+.pagePath{
+  /* padding: 0 20px; */
+}
+.join.con{
+  padding: 0 30px;
+}
+.join table tr td:first-child {
+  width: 24%;
+}
+.join table tr td:last-child {
+  font-size: 0.7rem;
+}
+.join.con table input{
+  display: block;
+  width: 80%;
+  margin-bottom: 5px;
+}
+.phoneNumber input{
+  width: 40%;
+  display: inline-block !important;
+}
+.terms {
+  font-size: 0.rem;
+}
+.terms ul li input[type=checkBox] {
+  margin: -3px 7px 0 0px;
+  vertical-align: middle;
+}
+.terms .allcheckLabel{
+  font-size: 0.85rem;
+}
+.terms ul li textarea {
+  margin: 15px 0;
+  width: 100%;
+  height: 200px;
+  font-size: 0.8rem;
+  padding: 15px 20px;
+  line-height: 22px;
+}
+.terms .checkLabel{
+  margin: -3px 7px 0 10px;
+}
+
+}

@@ -106,7 +106,7 @@ function Contents() {
       {/* 쵸이스 아이템 */}
       <section className='choiceItem'>
         <h3>쵸이스 아이템</h3>
-        <div>
+        <div className='titleTab'>
           <p className='title'>
             <b>Choice item</b><br />평범한 일상, 소소한 즐거움
           </p>

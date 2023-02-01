@@ -68,7 +68,7 @@ function Contents(){
           <span>전체 동의</span>
           <ul>
             <li>
-              <label><input id='checkAll' name='termsCheckAll' type='checkBox'/>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</label>
+              <label className='allcheckLabel'><input id='checkAll' name='termsCheckAll' type='checkBox'/>이용약관 및 개인정보수집 및 이용, 쇼핑정보 수신(선택)에 모두 동의합니다.</label>
             </li>
             {
               terms.map((a,i)=>{
@@ -78,7 +78,7 @@ function Contents(){
                     <textarea>{ terms[i].text }</textarea>
                     <span>
                       { terms[i].check }
-                      <label><input id={'checkBox'+[i]} name='termsCheck' type='checkBox'/>동의함</label>
+                      <label className='checkLabel'><input id={'checkBox'+[i]} name='termsCheck' type='checkBox'/>동의함</label>
                     </span>
                   </li>
                 )

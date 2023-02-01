@@ -93,8 +93,7 @@ function Contents(){
                     <td></td>
                     <td>
                       {
-                        // currentProduct?.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
-                        currentProduct.price
+                        currentProduct?.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')
                       }
                     </td>
                   </tr>
