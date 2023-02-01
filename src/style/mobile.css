@@ -2,6 +2,12 @@
   body {
     background: #eee;
   }
+  
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    }
+    
   .titleTab, .saleBanner .wid1050, .title, .category > div.category_list,
   .main_contents .section, .choiceItem, .banner1 > img, .banner2 > img,
   .footerinfo3, .reviews, .newItem{
@@ -9,8 +15,15 @@
     max-width: 100vw;
     min-width: 100vw;
   }
-  
 
+  a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+    color: #000 !important;
+}
+  .app{
+    width: 100%;
+    overflow-x: hidden;
+  }
 
   /* header */
   .topMain .thum, .topMain .search, .sidemenu{
@@ -24,7 +37,12 @@
     min-width: 100vw;
   }
   .topMenu > div > div.menu-Left {
-    width: 100%;
+    font-size: 0.75rem;
+    text-align: center;
+    width: 100% !important;
+}
+.topMenu > div > div.menu-Left > span:last-child {
+  padding-right: 0;
 }
 .topBanner button {
   margin: -5px 0 0 10px;
@@ -64,6 +82,17 @@
     .imageSlideWrap .slide_nextBtn {
       right: 20px;
   }
+  .imageSlideWrap .slideDot button {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: #aaa;
+    border-radius: 20px;
+    border: none;
+}
+.imageSlideWrap {
+  overflow: hidden;
+}
 
 
   /* header - category */
@@ -71,7 +100,7 @@
     width: 100vw;
     display: flex;
     align-items: self-start;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
     background: #eee;
     gap: 1px;
@@ -87,7 +116,7 @@
     font-size: 0.8rem;
     padding: 15px  0;
     text-align: center;
-    width: 19.8%;
+    width: 19.7%;
     background: #fff;
   }
 
@@ -108,7 +137,7 @@
 
   /* main */
   .choiceItem, .bestItem, .saleItem, .mdpickItem, .reviews, .pdList,
-  .categoryPageTop{
+  .categoryPageTop, .title{
     max-width: 100vw;
     min-width: 100vw;
     padding: 0 20px;
@@ -118,6 +147,21 @@
   , .pageName{
     width: 100% !important;
   }
+  .mdpickItem .title, .newItem .title, .bestItem .title, .titleTab,
+  .titleTab .title{
+    width: 100% !important;
+    max-width: 100% !important;
+    min-width: 100% !important;
+    padding: 0 !important;
+  }
+  .titleTab .title{
+    margin-bottom: 20px;
+  }
+.choiceItem .btnSet button{
+  font-size: 0.8rem !important;
+  width: 30%;
+  padding: 15px 0;
+}
   .main_contents > section {
     margin-bottom: 40px;
   }
@@ -150,10 +194,10 @@
   display: block;
 }
 .reviews .reviewBox .reviewImg {
-  height: 140px;
+  height: 110px;
 }
 .reviews .reviewBox {
-  width: 31.5%;
+  width: 30%;
 }
 
 /* footer */
@@ -175,7 +219,7 @@
   width: 100%;
   display: block;
   margin: 0;
-  padding: 0 20px !important;
+  padding: 0 0px !important;
   border: none;
   margin-bottom: 50px;
 }
@@ -194,6 +238,13 @@
   margin-bottom: 8px;
   padding-bottom: 8px;
 }
+.footerinfo3 img {
+  width: 80%;
+}
+.footerinfo1 ul li.title {
+  padding: 0 0 10px 0;
+  width: 100%;
+}
 
 
 
@@ -209,7 +260,13 @@
 .categoryPageTop .pageDetail{
     margin: 10px 0 10px;
 }
-
+.pageDetail > div{
+  display: block;
+}
+.categoryPageTop .pageDetail {
+  align-items: start;
+  flex-direction: column;
+}
 
 /* detail page */
 .detail_wrap, .company.con, .join.con{
@@ -228,13 +285,60 @@
   padding: 0;
   padding-top: 20px;
 }
+.productInfo ul li.pdName .title {
+  padding: 0;
+  margin-top: 5px;
+}
+.productInfo ul li.price .title {
+  padding: 0;
+}
+.productInfo ul li .subtitle {
+  width: 25%;
+}
+.productInfo ul table tr td:first-child {
+  width: 44%;
+}
+.productInfo ul table {
+  font-size: 0.8rem;
+}
+.productInfo ul li.price {
+  font-size: 1rem;
+  display: none;
+}
+.information > ul li.title {
+  padding: 0 0 20px 0;
+}
+.productInfo ul li.buttonSet button {
+  width: 32%;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 16px 0;
+}
+
 
 /* login join */
+.company.con .pagePath{
+  padding: 0 20px;
+}
+.con .pagePath {
+  padding: 0 0px;
+}
+.login {
+  width: 80%;
+  margin: auto;
+  margin-top: 40px;
+}
 .join.con{
-  padding: 0 30px;
+  padding: 0 20px;
+}
+.join.con .title{
+  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
 }
 .join table tr td:first-child {
-  width: 24%;
+  width: 21%;
+  font-size: 0.8rem;
 }
 .join table tr td:last-child {
   font-size: 0.7rem;
@@ -244,12 +348,13 @@
   width: 80%;
   margin-bottom: 5px;
 }
+
 .phoneNumber input{
   width: 40%;
   display: inline-block !important;
 }
 .terms {
-  font-size: 0.rem;
+  font-size: 0.8rem;
 }
 .terms ul li input[type=checkBox] {
   margin: -3px 7px 0 0px;
@@ -262,7 +367,7 @@
   margin: 15px 0;
   width: 100%;
   height: 200px;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   padding: 15px 20px;
   line-height: 22px;
 }

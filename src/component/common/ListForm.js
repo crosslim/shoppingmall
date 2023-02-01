@@ -86,7 +86,7 @@ function ReviewList(){
               <div className='reviewTxt'>
                 <b>{review_List[i].title}</b><br />
                 {review_List[i].text}
-                <span className='userId'>{review_List[i].userId.replace(/(?<=.{1})./gi,"*")}</span>
+                <span className='userId'>{review_List[i].userId}</span>
               </div>
               <div className='reviewDetail'>
                 <div className='userImg'><img src={review_List[i].image} alt='' /></div>
