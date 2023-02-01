@@ -5,23 +5,21 @@ h3 {
 }
 
 .imageSlideWrap {
-  height: 750px;
-  width: 100%;
+  width: 100vw;
   margin-bottom: 40px;
   position: relative;
 }
 .imageSlideWrap .imageSlide {
-  width: 200vw;
+  width: 400vw;
   transition: 0.5s;
   padding: 0;
   overflow: hidden;
-  height: 750px;
   white-space: nowrap;
   transition: transform 1s;
 }
 .imageSlideWrap .imageSlide .slideItem {
   display: inline-block;
-  width: 213vh;
+  width: 100vw;
   text-align: center;
   position: relative;
 }

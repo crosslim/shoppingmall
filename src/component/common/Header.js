@@ -130,7 +130,7 @@ function TopMain(){
             {
               searchWord.map((a,i)=>{
                 return(
-                  <li><span>{[i+1]}.</span>{searchWord[i]}</li>
+                  <li><a><span>{[i+1]}.</span>{searchWord[i]}</a></li>
                 )
               })
             }
@@ -141,7 +141,7 @@ function TopMain(){
             {
               searchWord.map((a,i)=>{
                 return(
-                  <li><span>{[i+1]}.</span>{searchWord[i]}</li>
+                  <li><a><span>{[i+1]}.</span>{searchWord[i]}</a></li>
                 )
               })
             }

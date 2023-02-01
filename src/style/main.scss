@@ -29,26 +29,27 @@ h3{
   display: none;
 }
 
-.imageSlideWrap{
-    height: 750px; //750
-    width: 100%;
+.imageSlideWrap{ //슬라이드 전체
+    width: 100vw;
     margin-bottom: 40px;
     position: relative;;
 
-    .imageSlide{
-      width: 200vw;
+    .imageSlide{ //ul
+      width: 400vw;
       transition: 0.5s;
       padding: 0;
       overflow: hidden;
-      height: 750px;
       white-space: nowrap;
       transition: transform 1s;
 
-      .slideItem{
+      .slideItem{ //li
       display: inline-block;
-      width: 213vh;
+      width: 100vw;
       text-align: center;
       position: relative;
+      img{
+        // width: 100%;
+      }
     }
   }
   .slide_preBtn, .slide_nextBtn{
