@@ -23,7 +23,7 @@ function Header() {
             <img src="../images/shop/logo.png" alt="" /></Link>
           </div>
           <div className='menu-right'>
-            <span><Link to='/community'>커뮤니티</Link></span>
+            <span><Link to='/board/notice'>커뮤니티</Link></span>
             <span><Link to='/customerCenter'>고객센터</Link></span>
           </div>
         </div>

@@ -38,7 +38,7 @@ function Contents(){
       </div>
       <div className="detailTop">
         <div className="thum2">
-          <img src={'../' + currentProduct?.imagePath + 'item' + currentProduct?.id + '/thum2.jpg'} alt="" />
+          <img src={'../' + currentProduct?.imagePath + 'item' + currentProduct?.id + '/thum1.jpg'} alt="" />
         </div>
         <div className="productInfo">
           <form >
