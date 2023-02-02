@@ -11,7 +11,8 @@ function Header() {
       <TopBanner />
       {/* top menu */}
       <div className='topMenu'>
-        <div>
+
+        <div id='pcTop'>
           <div className='menu-Left'>
             <span><Link to='/login'>로그인</Link></span>
             <span><Link to='/join'>회원가입</Link></span>
@@ -24,7 +25,21 @@ function Header() {
           </div>
           <div className='menu-right'>
             <span><Link to='/board/notice'>커뮤니티</Link></span>
-            <span><Link to='/customerCenter'>고객센터</Link></span>
+            <span><Link to='/board/customer'>고객센터</Link></span>
+          </div>
+        </div>
+
+        <div id='mobileTop'>
+          <div className='menu-Left'>
+            <span><Link to='/login'>로그인</Link></span>
+            <span><Link to='/join'>회원가입</Link></span>
+            <span><Link to='/cart'>장바구니</Link></span>
+            <span><Link to='/mypage'>마이페이지</Link></span>
+            <span><Link to='/board/notice'>커뮤니티</Link></span>
+            <span><Link to='/board/customer'>고객센터</Link></span>
+          </div>
+          <div className='center-Logo'><Link to='/'>
+            <img src="../images/shop/logo.png" alt="" /></Link>
           </div>
         </div>
       </div>   

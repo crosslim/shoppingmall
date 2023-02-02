@@ -24,6 +24,40 @@ a:hover{
 span {
   display: inline-block;
 }
+.mobileTop{
+  display: none;
+}
+.boardStyle{
+  width: 100%;
+  padding: 0;
+  li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(229, 227, 227);
+    font-size: 0.8rem;
+    padding: 12px 0;
+
+    span{
+      display: block;
+      text-align: center;
+    }
+  }
+  li.title{
+    padding: 6px 0;
+    border-top: 1px solid rgb(209, 206, 206);
+    border-bottom: 1px solid rgb(209, 206, 206);
+  }
+  li.text:hover{
+    background: rgb(248, 248, 248);
+    cursor: default;
+  }
+  li.text{
+    span:nth-child(2){
+      text-align: left !important;
+    }
+  }
+}
+
 
 /* 글자 숨기기 용도 */
 .util-ir {

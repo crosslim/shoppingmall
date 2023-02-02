@@ -6,7 +6,7 @@ import Company from './component/Company'
 import Login from './component/Login'
 import Join from './component/Join'
 import { Category, DesignStationery, Fashion, Beauty, Interior, Items, Digital, Sale} from './component/Category'
-import { Board, Notice} from './component/Board'
+import { Board, Notice, Board_read_Form, Customer} from './component/Board'
 import './style/common.css'
 import './style/mobile.css'
 
@@ -30,6 +30,8 @@ function App() {
         </Route>
         <Route path="/board" element={ <Board /> }>
           <Route path="notice" element={ <Notice /> } />
+          <Route path="customer" element={ <Customer /> } />
+          <Route path="board_read" element={ <Board_read_Form /> } />
         </Route>
       </Routes>
     </div>
