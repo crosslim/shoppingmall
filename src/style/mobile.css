@@ -73,26 +73,21 @@
   }
 
   /* slide */
-  .slideItem img{
-    width: 100%;
-  }
-  .imageSlideWrap .slide_preBtn {
-    left: 20px;
-  }
-    .imageSlideWrap .slide_nextBtn {
-      right: 20px;
-  }
-  .imageSlideWrap .slideDot button {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    background: #aaa;
-    border-radius: 20px;
-    border: none;
-}
-.imageSlideWrap {
-  overflow: hidden;
-}
+    .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {
+      height: 150px !important;
+    }
+    .swiper-pagination {
+      bottom: 25px;
+    }
+    :root {
+      --swiper-theme-color: #7c7c7c !important;
+    }
+    .swiper-slide.swiper-slide-active.slideItem {
+      text-align: center;
+    }
+    .swiper-slide.swiper-slide-active.slideItem img {
+      width: 100%;
+    }
 
 
   /* header - category */

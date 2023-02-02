@@ -17,7 +17,15 @@ import '../style/main.css'
 import { itemList } from '../data/item_fashion';
 import { mainSlideImage, searchWord } from '../data/shop_info';
 
-
+//swiper
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+// Import Swiper styles
+import 'swiper/css';
+// import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/autoplay';
+// import 'swiper/css/scrollbar';
 
 function Main() {
   return (
@@ -30,67 +38,40 @@ function Main() {
   );
 }
 
-
+function Swiper_main() {
+  return(
+    <Swiper
+      // install Swiper modules
+      modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
+      spaceBetween={100}
+      slidesPerView={1}
+      navigation
+      pagination={{ clickable: true }}
+      scrollbar={{ draggable: true }}
+      onSwiper={(swiper) => console.log(swiper)}
+      onSlideChange={() => console.log('slide change')}
+      autoplay={{ delay: 2000, disableOnInteraction: false }}
+      loop={true}
+    >
+    {
+      mainSlideImage.map((a,i)=>{
+        return (
+          <SwiperSlide className='slideItem'><img src={mainSlideImage[i]} alt="" /></SwiperSlide>
+        )
+      })
+    }
+    </Swiper>
+  )
+}
 function Contents() {
-
-  //image slide - 
-  let slidePage = 1;
-  let slideTotalNum = mainSlideImage.length;
-  let positionX = 100;
 
   return (
     <section className='main_contents'>
 
       {/* 상단 슬라이드 */}
       <section className='imageSlideWrap'>
-        <h3>상단슬라이스</h3>      
-        <ul className='imageSlide'>
-          {
-            mainSlideImage.map((a,i)=>{
-              return (
-                <li className='slideItem'><img src={mainSlideImage[i]} alt="" /></li>
-              )
-            })
-          }
-        </ul>
-        <div className='slideDot'>
-          {
-            mainSlideImage.map((a,i)=>{
-              return (
-                <button className={i} onClick={()=>{
-                  if(i + 1 != slidePage){
-                    $(".imageSlide").css("transform", "translateX(-" + (positionX * i) + "vw)");
-                    slidePage = i + 1;
-                  }
-                }}></button>
-              )
-            })
-          }
-          
-        </div>
-        {/* pre button */}
-        <button className='slide_preBtn' onClick={()=>{
-          $('.slideDot li').css('background','#aaa');
-          if (slidePage == 1){
-            $(".imageSlide").css("transform", "translateX(-"+ (positionX * (slideTotalNum - 1)) +"vw)");
-            slidePage = slideTotalNum;
-          } else { //4
-            $(".imageSlide").css("transform", "translateX(-" + (positionX * (slidePage - 2)) + "vw)");
-            slidePage = slidePage - 1;
-          }
-        }}>pre</button>
-
-        {/* next button */}
-        <button className='slide_nextBtn' onClick={()=>{
-          $('.slideDot li').css('background','#aaa');
-          if (slidePage == slideTotalNum){
-            $(".imageSlide").css("transform", "translateX(0vw)");
-            slidePage = 1;
-          } else {
-            $(".imageSlide").css("transform", "translateX(-" + (positionX * slidePage) + "vw)");
-            slidePage = slidePage + 1;
-          }          
-        }}>next</button>
+        <h3>상단슬라이스</h3>   
+        <Swiper_main />
       </section>
 
       {/* 세일배너3개 */}
