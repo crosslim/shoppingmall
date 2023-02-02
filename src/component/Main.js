@@ -50,8 +50,8 @@ function Swiper_main() {
       scrollbar={{ draggable: true }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log('slide change')}
-      autoplay={{ delay: 2000, disableOnInteraction: false }}
-      loop={true}
+      // autoplay={{ delay: 2000, disableOnInteraction: false }}
+      // loop={true}
     >
     {
       mainSlideImage.map((a,i)=>{
